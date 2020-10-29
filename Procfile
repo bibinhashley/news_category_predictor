@@ -1,1 +1,2 @@
-web: gunicorn nlpwebsite.wsgi
+web: gunicorn nlpwebsite.wsgi --log-file -
+
