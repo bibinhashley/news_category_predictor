@@ -1,13 +1,4 @@
-"""
-Django settings for nlpwebsite project on Heroku. For more info, see:
-https://github.com/heroku/heroku-django-template
 
-For more information on this file, see
-https://docs.djangoproject.com/en/2.0/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/2.0/ref/settings/
-"""
 
 import os
 import dj_database_url
@@ -16,7 +7,6 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-MODELS = os.path.join(BASE_DIR, 'nlp/models')
 
 
 # Quick-start development settings - unsuitable for production
@@ -36,9 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # Disable Django's own staticfiles handling in favour of WhiteNoise, for
-    # greater consistency between gunicorn and `./manage.py runserver`. See:
-    # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'nlp',
